@@ -172,7 +172,7 @@ youtube-rag-chatbot/
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/youtube-rag-chatbot.git
+git clone https://github.com/nikhiladitya-dev/Youtube-RAG-CHATBOT.git
 ```
 
 Navigate into the project
