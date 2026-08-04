@@ -1,13 +1,17 @@
-from app.services.transcript_service import TranscriptService
+import os
+import uvicorn
 
 
 def main():
-    url = input("Enter YouTube URL: ")
-    service = TranscriptService()
-    transcript = service.fetch_transcript(url)
-    service.save_transcript(transcript)
+
+    uvicorn.run(
+        "app.main:app",
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 8000)),
+        reload=False,
+    )
+
 
 if __name__ == "__main__":
-    main()
 
-    
+    main()
