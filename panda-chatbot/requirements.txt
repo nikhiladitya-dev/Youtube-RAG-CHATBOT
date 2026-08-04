@@ -1,32 +1,32 @@
-fastapi==0.116.1
-uvicorn==0.35.0
-streamlit==1.49.0
+fastapi
+uvicorn
+streamlit
 
-langchain==0.3.27
-langchain-community==0.3.27
-langchain-core==0.3.74
-langchain-huggingface==0.3.1
-langchain-chroma==0.2.5
-langchain-text-splitters==0.3.9
+langchain
+langchain-community
+langchain-core
+langchain-huggingface
+langchain-chroma
+langchain-text-splitters
 
-chromadb==1.0.20
+chromadb
 
-sentence-transformers==5.1.0
-transformers==4.55.4
-torch==2.8.0
+sentence-transformers
+transformers
+torch
 
-huggingface-hub==0.34.4
+huggingface-hub
 
-youtube-transcript-api==1.2.2
-yt-dlp==2025.8.22
+youtube-transcript-api
+yt-dlp
 
-pydantic==2.11.7
-pydantic-settings==2.10.1
-python-dotenv==1.1.1
+pydantic
+pydantic-settings
+python-dotenv
 
-requests==2.32.5
+requests
 
-numpy==2.3.2
-scikit-learn==1.7.1
+numpy
+scikit-learn
 
-python-multipart==0.0.20
+python-multipart
