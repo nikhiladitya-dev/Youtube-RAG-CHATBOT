@@ -1,0 +1,16 @@
+[
+
+
+{
+"question": "Why do we usually evaluate an algorithm based on its worst-case performance?",
+"ideal_answer": "Worst-case performance gives an upper bound on how much time an algorithm may take. Although an algorithm may perform better for some inputs, evaluating the worst case helps determine its maximum expected cost as the data set grows."
+},
+{
+"question": "How does merge sort sort a linked list?",
+"ideal_answer": "Merge sort recursively splits the linked list into smaller sub-lists until they are simple to handle, then repeatedly merges those sub-lists until one sorted linked list remains."
+},
+{
+"question": "What are the stopping conditions in the recursive binary search implementation?",
+"ideal_answer": "The search stops and returns false when the list is empty, meaning the value was not found. It also stops and returns true when the value at the midpoint matches the target."
+}
+]

@@ -1,0 +1,123 @@
+[
+{
+"question": "Why does binary search require the input list to be sorted?",
+"ideal_answer": "Binary search requires a sorted list because it decides which half of the list to discard by comparing the middle value with the target. If the list is not sorted, the discarded half could still contain the target, leading to an incorrect result."
+},
+{
+"question": "Why can inserting into a linked list still take linear time even though changing node references is fast?",
+"ideal_answer": "Changing the references to insert a node can be done in constant time, but finding the node at the desired position may require traversing the linked list. That traversal takes linear time, so locating the insertion position can make the overall operation linear."
+},
+{
+"question": "How is merge sort different from quicksort?",
+"ideal_answer": "Both are recursive, but quicksort divides a list into values less than or greater than a pivot value, while merge sort recursively splits the list in half and then sorts the halves as it merges them back together."
+},
+{
+"question": "What is algorithmic thinking?",
+"ideal_answer": "Algorithmic thinking is an approach to problem solving that involves breaking a problem down into clearly defined inputs and outputs, along with a distinct set of steps that solves the problem by going from input to output."
+},
+{
+"question": "Why is it important to clearly define the bounds and inputs of a problem?",
+"ideal_answer": "No solution works for every problem, so clearly defining the problem set and clarifying which values count as inputs helps establish the bounds of the problem and determine what solution is appropriate."
+},
+{
+"question": "Why is a sequential algorithm that reads every item in a list considered to run in linear time?",
+"ideal_answer": "Because in the worst case the number of operations grows with the number of items in the list. If an algorithm sequentially reads every item, its number of operations is at most proportional to n, so it runs in linear time, represented as Big O of n."
+},
+{
+"question": "What is space complexity and why is it important when designing algorithms?",
+"ideal_answer": "Space complexity deals with the amount of memory an algorithm takes up. It is important because an algorithm needs to perform efficiently as the data set grows, and a very fast algorithm may still be impractical if it consumes more memory than is available."
+},
+{
+"question": "What are the two fundamental parts a recursive function needs?",
+"ideal_answer": "A recursive function needs a recursive case that causes the function to call itself and a base case that eventually stops the recursion."
+},
+{
+"question": "Why does repeatedly appending to a list have amortized constant space complexity even though resizing sometimes uses more space?",
+"ideal_answer": "Some append operations do not increase the space used, while resizing at specific points requires additional memory. When the space requirements of all append operations are averaged out, the append operation takes constant space, giving it amortized constant space complexity."
+},
+{
+"question": "Why can inserting an item at the beginning of an array take linear time?",
+"ideal_answer": "In the worst case, inserting an item at the zeroth position requires every existing item in the array to be shifted forward. Since the operation may need to iterate through every value, it has a linear runtime."
+},
+{
+"question": "Why is accessing an element in an array a constant-time operation?",
+"ideal_answer": "Arrays store their elements in contiguous memory, so the memory location of an element can be calculated using an offset from the base memory address. Because this calculation can be done directly, accessing an element is a constant-time operation."
+},
+{
+"question": "What is the main problem with bogosort?",
+"ideal_answer": "Bogosort randomizes the order of a list and checks whether it is sorted, but each pass makes no progress toward a solution. A list that is almost sorted on one attempt can be completely out of order on the next, so finding a sorted result is a matter of luck and may never happen for larger lists."
+},
+{
+"question": "Why can removing a node from a singly linked list take linear time even though changing the links is fast?",
+"ideal_answer": "Removing a node and modifying the next references can be done in constant time, but finding the node to remove may require traversing the list. In the worst case, the entire list must be traversed, so the overall operation takes linear time."
+},
+{
+"question": "Why can't a singly linked list directly use the previous node when removing a matched node?",
+"ideal_answer": "In a singly linked list, a node does not provide a reference to the previous node. To remove a matched node, the node before it needs to point to the node after it, so the previous node must be found during traversal."
+},
+{
+"question": "Why can choosing a bad pivot make quicksort perform poorly?",
+"ideal_answer": "A bad pivot may fail to divide the list into balanced parts, causing each recursive call to reduce the list by only one element. If this happens repeatedly, quicksort must split the list once for every item, leading to its worst-case performance."
+},
+{
+"question": "Why was Big O notation created?",
+"ideal_answer": "Big O notation was created as a way to quickly describe how an algorithm performs as the size of the data set increases, making it easier to compare algorithms and choose the best one for a problem."
+},
+{
+"question": "What does the n represent in Big O notation?",
+"ideal_answer": "The n in Big O notation refers to the number of elements the algorithm is operating on."
+},
+{
+"question": "Why do many quicksort implementations choose the pivot at random?",
+"ideal_answer": "Choosing a pivot at random helps quicksort perform closer to its best case on average and can reduce the number of recursive operations needed. Random pivots can sometimes produce the worst case, but the results average out over multiple calls."
+},
+{
+"question": "How does selection sort gradually move toward a completed sorted list?",
+"ideal_answer": "Selection sort looks through the unsorted values on each pass, finds the smallest one, and moves it to the sorted list. Each pass moves one value into its correct sorted position, leaving fewer items to compare on later passes."
+},
+{
+"question": "What does divide and conquer mean in algorithm design?",
+"ideal_answer": "Divide and conquer is a technique where a problem is split into smaller and smaller problems until they become easy to solve."
+},
+{
+"question": "Why can repeatedly using linear search become a problem for large lists?",
+"ideal_answer": "Linear search does not narrow down the search space, so it may have to search the entire list each time. For large lists or repeated searches, this can take enough time to slow down an application."
+},
+{
+"question": "How does merge sort sort a linked list?",
+"ideal_answer": "Merge sort recursively splits the linked list into smaller sub-lists until they are simple to handle, then repeatedly merges those sub-lists until one sorted linked list remains."
+},
+{
+"question": "What are the stopping conditions in the recursive binary search implementation?",
+"ideal_answer": "The search stops and returns false when the list is empty, meaning the value was not found. It also stops and returns true when the value at the midpoint matches the target."
+},
+{
+"question": "What is the difference between homogeneous and heterogeneous arrays mentioned in the video?",
+"ideal_answer": "A homogeneous array stores values of the same type, while a heterogeneous array can contain different kinds of values. This choice can also affect the array's memory layout."
+},
+{
+"question": "Why can an array calculate the location of any element using just its index?",
+"ideal_answer": "Because an array stores its elements in contiguous memory. By keeping the address of the first memory location, the array can calculate the address of any element by using that element's index as an offset."
+},
+{
+"question": "Why does merge sort have the same Big O runtime regardless of the input arrangement?",
+"ideal_answer": "Merge sort does not depend on choosing a pivot. A list of n items is always divided in half log n times, so its runtime is always O(n log n)."
+},
+{
+"question": "What is the difference between the recursive and iterative versions of binary search discussed in the video?",
+"ideal_answer": "Both versions achieve the same result and have the same runtime, but the recursive version uses list slicing with every recursive call, while the iterative version achieves the result without list slicing and runs in constant space."
+},
+{
+"question": "Why should an algorithm's correctness be considered before its efficiency?",
+"ideal_answer": "An algorithm must first be correct for the problem it is intended to solve before its efficiency can be meaningfully evaluated."
+},
+{
+"question": "What does the video mean by a quasi-linear runtime?",
+"ideal_answer": "A quasi-linear algorithm has a runtime of n log n, meaning that as it goes through n values, it performs log n operations. This runtime lies between linear and quadratic runtime."
+},
+{
+"question": "Why do we usually evaluate an algorithm based on its worst-case performance?",
+"ideal_answer": "Worst-case performance gives an upper bound on how much time an algorithm may take. Although an algorithm may perform better for some inputs, evaluating the worst case helps determine its maximum expected cost as the data set grows."
+}
+
+]
