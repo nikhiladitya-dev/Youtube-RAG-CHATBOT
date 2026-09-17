@@ -15,6 +15,14 @@ Instead of watching an entire video, users simply provide a YouTube URL and ask 
 
 The project is designed using a modular architecture with FastAPI, LangChain, ChromaDB, Hugging Face models, and Streamlit.
 
+**Retriever Evaluation:**
+- Contextual Precision : 1.00
+- Contextual Recall : 0.84
+  
+**Generator Evaluation:**
+- Faithfulness : 0.86
+- Answer Relevancy : 0.95
+
 ---
 
 # ✨ Features
@@ -36,17 +44,6 @@ The project is designed using a modular architecture with FastAPI, LangChain, Ch
 - ChromaDB Vector Database
 - Persistent vector storage
 - Fast semantic retrieval
-
----
-
-### 🤖 Retrieval-Augmented Generation (RAG)
-
-- Context-aware retrieval
-- MMR (Max Marginal Relevance) Search
-- Multi-turn conversation support
-- History-aware question rewriting
-- Grounded responses only
-- Hallucination prevention
 
 ---
 
@@ -73,7 +70,7 @@ This allows users to directly verify every generated response.
 
 ---
 
-# 🏗️ Project Architecture
+#  Project Architecture
 
 ```
 User
@@ -241,7 +238,7 @@ streamlit run app/frontend/app.py
 
 ---
 
-# 🧩 Implemented RAG Pipeline
+#  Implemented RAG Pipeline
 
 <img width="754" height="470" alt="image" src="https://github.com/user-attachments/assets/3b8dae64-4b0d-43b3-b2db-aaeb30bea3d6" />
 
@@ -297,6 +294,12 @@ streamlit run app/frontend/app.py
 - Timestamp Citations
   
  <img width="1914" height="913" alt="image" src="https://github.com/user-attachments/assets/5be483f4-089a-4a40-bbc4-cbc3e2a44025" />
+
+ - RAG Evaluation
+
+   <img width="896" height="378" alt="Screenshot 2026-09-09 110536" src="https://github.com/user-attachments/assets/1b4bb10e-d104-42d3-98e0-afa437e27a95" />
+
+    <img width="1295" height="377" alt="Screenshot 2026-09-10 103405" src="https://github.com/user-attachments/assets/f2c6cd66-9d34-4e9c-9faf-632261df3a09" />
 
 
 ---
