@@ -1,0 +1,41 @@
+services:
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: panda-backend
+
+    env_file:
+      - .env
+
+    environment:
+      PORT: 8000
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./data:/app/data
+
+    restart: unless-stopped
+
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+
+    container_name: panda-frontend
+
+    environment:
+      API_URL: http://backend:8000/api/v1
+
+    ports:
+      - "8501:8501"
+
+    depends_on:
+      - backend
+
+    restart: unless-stopped
